@@ -142,6 +142,9 @@ h4{
 
   &.green{
     background: #3BF7D4;
+    background-image: url(./assets/boat.jpg);
+    background-size: cover;
+    background-position: bottom;
   }
 
   &.blue{
@@ -169,6 +172,10 @@ h4{
   }
 }
 
+.row{
+  margin: 0.5rem 0;
+}
+
 .price{
   font-size: 1.2rem;
   font-weight: 700;
@@ -180,7 +187,7 @@ h4{
   width: 30px;
   height: 30px;
   background: orange;
-  background: radial-gradient(#f7b573, #FD895D);
+  background: radial-gradient(circle at top left, #f7b573, #FD895D);
   border-radius: 50%;
   transform: translateX(50%);
   box-shadow: 5px 5px 10px rgb(65, 32, 90, 0.5);

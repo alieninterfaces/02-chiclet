@@ -57,17 +57,14 @@ const config = (env, argv)=>({
                 test: /\.css$/,
                 use: [
                     {loader: "style-loader"},
-                    {loader: "css-loader", options: {
-                        //exportType: 'string'
-                    }},
-                    //{loader: 'lit-css-loader'}
+                    {loader: "css-loader", options: {url: false}},
                 ]
             },
             {
               test: /\.s[ac]ss$/i,
               use: [
                 "style-loader",
-                "css-loader",
+                {loader: "css-loader", options: {url: false}},
                 "sass-loader",
               ],
             },
