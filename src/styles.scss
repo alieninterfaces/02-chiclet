@@ -187,6 +187,7 @@ h4{
 .grid-item{
   button{
     position: absolute;
+    font-size: 0.5rem;
     bottom: 1.5rem;
     right: 1.5rem;
     border-radius: 20px;
@@ -195,6 +196,7 @@ h4{
     box-shadow: 5px 5px 10px rgb(65, 32, 90, 0.5);
     transition: transform 0.4s var(--ease);
     cursor: pointer;
+    margin-right: -0.5rem;
   
     &:hover{
       transform: scale(1.2);
