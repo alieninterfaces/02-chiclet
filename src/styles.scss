@@ -20,6 +20,7 @@ body {
   height: 100%;
 }
 
+/*
 #smooth-content{
   display: flex;
   flex-direction: column;
@@ -27,6 +28,7 @@ body {
   justify-content: space-between;
   overflow-y: hidden !important;
 }
+*/
 
 .hero {
   position: relative;
@@ -107,7 +109,7 @@ h4{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
-  padding: 0 3rem;
+  padding: 0 1rem;
   margin-top: 0;
   margin-bottom: 2em;
   color: white;
@@ -130,6 +132,11 @@ h4{
 
   &.orange{
     background: linear-gradient(332deg, #F69F86, #F69F86 30%, #FCD797);
+
+    button{
+      background: linear-gradient(0deg, #f5d6d1, #fae7e1);
+      color: #9a6455;
+    }
   }
   
   &.orange2{
@@ -149,6 +156,11 @@ h4{
 
   &.blue{
     background: linear-gradient(0deg, #5959B0, #7F79E7);
+
+    button{
+      color: #5959B0;
+      background: linear-gradient(0deg, #fae0e9, #fae0e9);
+    }
   }
 
   &.purple{
@@ -172,6 +184,24 @@ h4{
   }
 }
 
+.grid-item{
+  button{
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    border-radius: 20px;
+    border: none;
+    padding: 0.5rem 1rem;
+    box-shadow: 5px 5px 10px rgb(65, 32, 90, 0.5);
+    transition: transform 0.4s var(--ease);
+    cursor: pointer;
+  
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+}
+
 .row{
   margin: 0.5rem 0;
 }
@@ -191,6 +221,27 @@ h4{
   border-radius: 50%;
   transform: translateX(50%);
   box-shadow: 5px 5px 10px rgb(65, 32, 90, 0.5);
+}
+
+.more-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-btn{
+  color:rgb(65, 32, 90);
+  border-radius: 20px;
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: #FDFCFD;
+  box-shadow: 5px 5px 10px rgb(65, 32, 90, 0.25);
+  transition: transform 0.4s var(--ease);
+  cursor: pointer;
+
+  &:hover{
+    transform: scale(1.2);
+  }
 }
 
 nav{
