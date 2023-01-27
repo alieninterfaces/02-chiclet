@@ -38,12 +38,12 @@ requestAnimationFrame(draw);
 function init() {
   console.log("init");
 
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth * window.devicePixelRatio;
+  canvas.height = window.innerHeight * window.devicePixelRatio;
 }
 
 function draw() {
-  delta += 0.02;
+  delta += 0.04;
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -65,14 +65,14 @@ function draw() {
 
   let orangePath = new Path2D();
   orangePath.moveTo(0, 0);
-  for (let i = 1; i < canvas.width; i++) {
+  for (let i = 0; i < canvas.width + 1; i++) {
     let y =
       canvas.height / 3 + Math.sin(i / 50) * (40 * Math.sin(delta * 0.03));
     y += Math.sin(i / 100) * (50 * Math.sin(delta * 0.02));
     orangePath.lineTo(i, y);
   }
   orangePath.lineTo(canvas.width, 0);
-
+  orangePath.closePath();
   ctx.fill(orangePath);
 
   //white
@@ -90,7 +90,7 @@ function draw() {
 
   let whitePath = new Path2D();
   whitePath.moveTo(0, canvas.height);
-  for (let i = 1; i < canvas.width; i++) {
+  for (let i = 0; i < canvas.width + 1; i++) {
     let y =
       (canvas.height / 3) * 2 +
       Math.sin(i / 200) * (100 * Math.sin(delta * 0.04));
@@ -98,7 +98,7 @@ function draw() {
     whitePath.lineTo(i, y);
   }
   whitePath.lineTo(canvas.width, canvas.height);
-
+  whitePath.closePath();
   ctx.fill(whitePath);
 
   requestAnimationFrame(draw);
